@@ -17,4 +17,4 @@ target_link_libraries(
     native_app_glue
     log
     vulkan
-    /Users/hossein/Documents/Projects/vulkust/target/aarch64-linux-android/libvulkust-static.a)
+    $ENV{VULKUST_SDK}/target/aarch64-linux-android/libvulkust-static.a)
