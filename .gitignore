@@ -3,6 +3,8 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/.idea/caches/
+/.idea/misc.xml
 .DS_Store
 /build
 /captures
@@ -12,4 +14,9 @@
 *.jpg
 *.spv
 *.a
+*.ttf
+*.gx3d
+*.bin
+*.glb
+*.gltf
 build_file_checksums.ser
