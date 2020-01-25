@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.vulkust.demo">
+          package="com.rust_graphics.demo">
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:screenOrientation="landscape"
         android:keepScreenOn="true"
-        android:label="Vulkust Demo"
+        android:label="Rust-Graphics Demo App"
         android:hasCode="false"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity android:name="android.app.NativeActivity"
@@ -17,7 +17,7 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <!-- Tell NativeActivity the name of our .so -->
             <meta-data android:name="android.app.lib_name"
-                android:value="vulkust" />
+                android:value="main" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
