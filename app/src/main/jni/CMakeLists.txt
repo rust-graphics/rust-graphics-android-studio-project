@@ -20,9 +20,18 @@ else()
     message(FATAL_ERROR "Unexpected arch ${ANDROID_ABI} specified.")
 endif()
 
+set(RUST_AND_FOLDER "target/${RUST_AND_FOLDER}")
+
+set(APP_GLUE_PATH "${ANDROID_NDK}/sources/android/native_app_glue")
+add_library(native-app-glue STATIC ${APP_GLUE_PATH}/android_native_app_glue.c)
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
+
 add_library(main SHARED main.c)
 target_link_libraries(
         main
         log
-        ${CMAKE_SOURCE_DIR}/../../../../../rust-graphics-hello-triangle/target/${RUST_AND_FOLDER}/librust_graphics_lib.a)
+        android
+        EGL
+        m
+        native-app-glue
+        ${CMAKE_SOURCE_DIR}/../../../../../rust-graphics-hello-triangle/${RUST_AND_FOLDER}/librust_graphics_lib.a)
